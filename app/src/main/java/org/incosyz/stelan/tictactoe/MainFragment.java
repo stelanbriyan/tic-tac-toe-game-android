@@ -2,6 +2,7 @@ package org.incosyz.stelan.tictactoe;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -42,6 +43,23 @@ public class MainFragment extends Fragment {
             }
         });
 
+        View newButton = rootView.findViewById(R.id.new_button);
+        newButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),
+                        GameActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        View continueButton = rootView.findViewById(R.id.continue_button);
+        continueButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),
+                        GameActivity.class);
+                intent.putExtra(GameActivity.KEY_RESTORE, true);
+                getActivity().startActivity(intent);
+            }
+        });
         return rootView;
     }
 

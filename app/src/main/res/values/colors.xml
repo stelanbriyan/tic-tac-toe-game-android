@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="field_color">#b5cee0</color>
     <color name="border_color">#7f7f7f</color>
+    <color name="dark_border_color">#6d6d6d</color>
+    <color name="gray_color">#3f3f3f</color>
+    <color name="available_color">#48ab56</color>
+    <color name="tile_background_color">#aeadad</color>
 </resources>
